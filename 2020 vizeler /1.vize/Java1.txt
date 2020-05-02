@@ -1,0 +1,90 @@
+package kaya;
+
+
+
+public class m12 {
+
+	public static void main(String[] args) {
+		
+		String ad = "Kaya unal";
+
+		int uzunluk=1+(ad.length());
+		
+		int sayac1=0;
+		int sayac2=0;
+		int sayac3=0;
+		int sayac4=0;
+		
+		for(int i=1;i<5;i++)
+		{
+			
+			System.out.print("+-");
+			
+			sayac1++;
+			
+			if(sayac1>3)
+			{
+				System.out.print("+");
+			}
+		}
+		
+		System.out.print(" ");
+		
+		
+		for(int i=1;i<5;i++)
+		{
+			
+			System.out.print("+-");
+			
+			sayac2++;
+			
+			if(sayac2>3)
+			{
+				System.out.print("+");
+			}
+		}
+		System.out.println(" ");
+		System.out.print("|");
+		
+		
+		for(int i=1;i<uzunluk;i++)
+		{
+			
+			System.out.print(ad.substring((i-1),i)+"|");
+		}
+		System.out.println(" ");
+		
+		
+		for(int i=1;i<5;i++)
+		{
+			
+			System.out.print("+-");
+			
+			sayac3++;
+			
+			if(sayac3>3)
+			{
+				System.out.print("+");
+			}
+		}
+		System.out.print(" ");
+		
+		
+		for(int i=1;i<5;i++)
+		{
+			
+			System.out.print("+-");
+
+			sayac4++;
+			
+			if(sayac4>3)
+			{
+				System.out.print("+");
+			}
+		}
+		
+		
+		
+	}
+
+}

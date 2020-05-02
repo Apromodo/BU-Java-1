@@ -1,0 +1,95 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        String ogrenciNumaram = "21595250";
+        String adimSoyadim = "Beste Toygar";
+        String benimSoyadim[] ;
+        String ogrenciNumaramSonIkiHane = ogrenciNumaram.substring(6);
+
+        String ziyaretciAdiSoyadi;
+        String[] ziyaretciSoyadi;
+        Integer ziyaretciKisiSayisi;
+
+        Double biletUcreti = 0.0;
+        Double toplamBiletUcreti = 0.0;
+
+        System.out.println("Adınızı Soyadınızı Giriniz : ");
+        ziyaretciAdiSoyadi = scanner.nextLine();
+        System.out.println("Kişi Sayısını Giriniz : ");
+        ziyaretciKisiSayisi = scanner.nextInt();
+
+        ziyaretciSoyadi = ziyaretciAdiSoyadi.split("\\s+");
+        benimSoyadim = adimSoyadim.split("\\s+");
+
+        String permaBenimSoyadim = benimSoyadim[1];
+        String permaziyaretciSoyadi = ziyaretciSoyadi[1];
+
+        if(adimSoyadim.equals(ziyaretciAdiSoyadi) || permaBenimSoyadim.equals(permaziyaretciSoyadi)){
+
+            if(ziyaretciKisiSayisi< Integer.parseInt(ogrenciNumaramSonIkiHane)){
+                biletUcreti = 20.00;
+                
+                toplamBiletUcreti = biletUcreti * ziyaretciKisiSayisi;
+
+                System.out.println("Bir Bilet Ücreti : " + biletUcreti);
+                System.out.println("Toplam Bilet Ücreti : " + toplamBiletUcreti);
+            }
+
+            if(ziyaretciKisiSayisi == Integer.parseInt(ogrenciNumaramSonIkiHane)){
+                biletUcreti = 20.00;
+
+                toplamBiletUcreti = (biletUcreti * 3) / 100;
+
+                System.out.println("Bir Bilet Ücreti : " + (biletUcreti - toplamBiletUcreti));
+                System.out.println("Toplam Bilet Ücreti : "+ (biletUcreti - toplamBiletUcreti) * ziyaretciKisiSayisi);
+            }
+
+            if(ziyaretciKisiSayisi > Integer.parseInt(ogrenciNumaramSonIkiHane)){
+                biletUcreti = 20.00;
+
+                toplamBiletUcreti = (biletUcreti * 5) / 100;
+
+                System.out.println("Bir Bilet Ücreti : " + (biletUcreti - toplamBiletUcreti));
+                System.out.println("Toplam Bilet Ücreti : "+ (biletUcreti - toplamBiletUcreti) * ziyaretciKisiSayisi);
+            }
+        }else{
+
+            if(ziyaretciKisiSayisi< Integer.parseInt(ogrenciNumaramSonIkiHane)){
+                biletUcreti = 30.00;
+
+                toplamBiletUcreti = biletUcreti * ziyaretciKisiSayisi;
+
+                System.out.println("Bir Bilet Ücreti : " + biletUcreti);
+                System.out.println("Toplam Bilet Ücreti : " + toplamBiletUcreti);
+
+            }
+
+            if(ziyaretciKisiSayisi == Integer.parseInt(ogrenciNumaramSonIkiHane)){
+                biletUcreti = 30.00;
+
+                toplamBiletUcreti = (biletUcreti * 2) / 100;
+
+                System.out.println("Bir Bilet Ücreti : " + (biletUcreti - toplamBiletUcreti));
+                System.out.println("Toplam Bilet Ücreti : "+ (biletUcreti - toplamBiletUcreti) * ziyaretciKisiSayisi);
+            }
+
+            if(ziyaretciKisiSayisi > Integer.parseInt(ogrenciNumaramSonIkiHane)){
+                biletUcreti = 30.00;
+
+                toplamBiletUcreti = (biletUcreti * 4) / 100;
+
+                System.out.println("Bir Bilet Ücreti : " + (biletUcreti - toplamBiletUcreti));
+                System.out.println("Toplam Bilet Ücreti : "+ (biletUcreti - toplamBiletUcreti) * ziyaretciKisiSayisi);
+            }
+
+        }
+
+    }
+}
