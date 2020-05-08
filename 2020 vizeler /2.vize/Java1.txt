@@ -1,0 +1,91 @@
+public static void main(String[] args)
+package kaan;
+
+import java.util.Scanner;
+
+public class sınav21 {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Morse kodunu giriniz    : ");
+		
+		String morsekodu = sc.nextLine();
+		
+		System.out.println("Sesli telaffuzu giriniz :");
+		
+		String seslitelafuz = sc.nextLine();
+		
+		int uzunluk=morsekodu.length();
+		int sayac=0;
+		int çizgi=0;
+		int nokta=0;
+		
+		String a0="ka";
+		String a1="ka";
+		String a2="ka";
+		String a3="ka";
+		String a4="ka";
+		String a5="ka";
+		String a6="ka";
+		String a7="ka";
+		String a8="ka";
+		String a9="ka";
+		String am="ka";
+		String b0="ün";
+		String b1="ün";
+		String b2="ün";
+		String b3="ün";
+		String b4="ün";
+		String b5="ün";
+		String b6="ün";
+		String b7="ün";
+		String b8="ün";
+		String b9="ün";
+		String bn="ün";
+		String toplam="";
+		
+		
+		for(int i=0;i<uzunluk;i++)
+		{
+			String morseharf=morsekodu.substring(sayac,sayac+1);
+			sayac++;
+			
+			if(morseharf.startsWith("-"))
+			{
+				çizgi++;
+				
+					
+					int m=çizgi;
+					toplam=toplam+am;
+					
+					
+			}
+			else if(morseharf.startsWith("."))
+			{
+				nokta++;
+				
+				int n=çizgi;
+				toplam=toplam+bn;
+				
+			}
+		}
+		int aaaaaa=toplam.indexOf(seslitelafuz);
+		if(aaaaaa>-1)
+		{
+			System.out.println("Morse kodu ile Sesli telaffuz karşılığı birbiri ile AYNIDIR");
+			System.out.println("çizgi="+çizgi);
+			System.out.println("nokta:"+nokta);
+		}
+		else
+		{
+			System.out.println("Morse kodu ile Sesli telaffuz karşılığı birbiri ile AYNI DEĞİLDİR");
+			System.out.println("çizgi="+çizgi);
+			System.out.println("nokta:"+nokta);
+		}
+
+	}
+
+}

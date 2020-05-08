@@ -1,0 +1,56 @@
+public static void main(String[] args)
+package kaan;
+
+import java.util.Scanner;
+
+public class aa {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Bitiş değerini giriniz: ");
+		
+		int bitisdegeri = sc.nextInt();
+		
+		
+		
+		
+			while(bitisdegeri !=0)
+			{
+			System.out.println("Yanlış Girdiniz Bitiş değerini giriniz: ");
+			
+			 bitisdegeri = sc.nextInt();
+			 
+			 if(bitisdegeri>100 && bitisdegeri<280)
+			 {
+			 for(int sayac = bitisdegeri;sayac>0;sayac--)
+		        {
+				int yüzler = bitisdegeri/100;
+				int onlar= (bitisdegeri-(yüzler*100))/10;
+				int birler=bitisdegeri-(yüzler*100)-(onlar*10);
+				
+				
+				if(onlar+birler==yüzler)
+				{
+					System.out.println(bitisdegeri);
+					bitisdegeri--;
+				}
+				
+				else {
+					bitisdegeri--;
+					
+				}
+		        }
+			 }
+			 
+		
+        }
+		
+		
+		
+		}
+	}
+
+
+
