@@ -25,7 +25,7 @@ public class uygulama2a {
 		System.out.println("Tüketim miktarý    : "+tktmiktar);
 		System.out.println("Tüketim Tutarý     : "+tkttutar);
 		System.out.println("Atýk Su Bedeli     : "+atiksu);
-		System.out.println("Toplam             : "+toplam);
+		System.out.println("Toplam             : "+toplam+" TLdir");
 	}
 
 }

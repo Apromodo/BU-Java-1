@@ -1,11 +1,16 @@
 package lab2;
 
+import java.util.Scanner;
+
 public class uygulama2c {
 
 	public static void main(String[] args) {
-		int sayi=1234;
-		System.out.println(sayi+" sayýsýnda");
 		
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Lütfen Öðrenmek Ýstediðiniz Sayýyý Girin: ");
+		int sayi = sc.nextInt();
+
+		System.out.println(sayi+" sayýsýnda");
 		int binler=sayi/1000;
 		sayi=sayi-binler*1000;
 		int yuzler=sayi/100;
