@@ -5,21 +5,21 @@ import java.util.Scanner;
 public class Soru1 {
 	
 	public static void main(String[] args) {
-		 int toplam=0;
-		 int ort = 0,sayac=0;
-		 while(true)
-		 {
-			Scanner sc = new Scanner(System.in);
-			System.out.print("Yaþ giriniz(Durdurmak için 0): ");
-			int yas = sc.nextInt();
-			if(yas==0) break;
-			toplam=toplam + yas;
-			sayac++;
-			ort=toplam/sayac;
-		}
-		System.out.println("-----------------------------------");
-		System.out.println("Toplam "+sayac+" kiþi katýldý");
-		System.out.println("Ortalama= "+ort+", Kýrpýlmýþ ortalama= ");
+		int arr[] = { 2, 1, 7, 9, 6, 2, 8, 0 };
+        int n = arr.length;
+        for (int i = 0; i < n - 1; i++) {
+            for (int j = 0; j < n - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+            for (int m = 0; i < n; i++) {
+                System.out.print(arr[m] + " ");
+            }
+        }
 	}
 }
 
